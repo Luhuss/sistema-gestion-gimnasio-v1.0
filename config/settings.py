@@ -10,9 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
-import dj_database_url  # <--- AGREGAR ESTO AL PRINCIPIO
-import os
 from pathlib import Path
+import os
+import dj_database_url  # <--- AGREGAR ESTO AL PRINCIPIO
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -81,7 +81,8 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Configuración de Base de Datos Híbrida
 DATABASES = {
     'default': dj_database_url.config(
-        # Si estamos en Render, usa PostgreSQL. Si estamos en tu Mac, usa SQLite.
+        # Busca la variable DATABASE_URL en Render. 
+        # Si no la encuentra (estás en tu Mac), usa el 'default' (tu archivo local).
         default='sqlite:///' + str(BASE_DIR / 'db.sqlite3'),
         conn_max_age=600
     )
