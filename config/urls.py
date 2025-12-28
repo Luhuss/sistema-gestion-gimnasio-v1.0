@@ -15,10 +15,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from core.views import lista_clientes # importamos la lista
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')), # esta linea activa el login
     path('', lista_clientes, name='home'), # las comillas vacias '' es para que se pueda leer la pagina
 ]

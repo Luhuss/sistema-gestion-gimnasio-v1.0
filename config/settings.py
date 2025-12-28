@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-d+nqwac(svd1zla3$(n0t6g!ai)wqc@yur=a9k3a)1k4yp&l($
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -119,7 +120,17 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+# Esto le dice a Django dónde reunir todos los archivos para la nube
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+# Esto optimiza el almacenamiento
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Redirecciones de Login
+LOGIN_REDIRECT_URL = '/'  # Al entrar, llévame al inicio (tu lista de clientes)
+LOGOUT_REDIRECT_URL = '/accounts/login/' # Al salir, llévame al login
