@@ -1,51 +1,31 @@
-# Sistema de Gestión de Gimnasio (SGG)
+# 💪 Sistema de Gestión de Gimnasio
 
-## 📋 Descripción del Proyecto
-Sistema integral desarrollado en **Python** y **Django** para la administración de centros deportivos. Esta solución permite gestionar el ciclo de vida de los clientes, controlar la vigencia de membresías mediante lógica de negocios y mantener un registro financiero de pagos.
+> **🔴 DEMO EN VIVO:** Puedes probar el proyecto funcionando aquí:  
+> 👉 [https://gimnasio-luhuss.onrender.com](https://gimnasio-luhuss.onrender.com)  
+> *(Nota: Al ser un servicio gratuito, puede tardar unos segundos en "despertar" la primera vez)*
 
-El proyecto fue diseñado con un enfoque en la escalabilidad y la integridad referencial de los datos.
+## 📋 Descripción
+Aplicación web completa para la administración de clientes, membresías y pagos de un gimnasio. Desarrollada en **Django** y desplegada en la nube con una base de datos profesional.
 
-## 🚀 Características Principales
-* **Gestión de Clientes:** Registro detallado con validaciones de datos personales.
-* **Control de Membresías:** Sistema inteligente que vincula suscripciones a clientes específicos.
-    * *Visualización de Estado:* Indicadores visuales automáticos (✅ Activa / ❌ Vencida) en el panel administrativo.
-* **Registro Financiero:** Historial de pagos inmutable vinculado al cliente.
-* **Admin Panel Robusto:** Interfaz de administración personalizada con filtros avanzados, búsqueda y acciones rápidas.
+El objetivo del proyecto es eliminar el uso de planillas de cálculo (Excel) y centralizar la información de manera segura y escalable.
 
-## 🛠 Tecnologías Utilizadas
-* **Lenguaje:** Python 3.12+
-* **Framework Web:** Django 6.0
-* **Base de Datos:** SQLite (Entorno de Desarrollo) / Extensible a PostgreSQL
-* **Arquitectura:** MVT (Model-View-Template)
+## 🚀 Tecnologías Utilizadas
+* **Backend:** Python, Django 6.0
+* **Base de Datos:** PostgreSQL (Producción) / SQLite (Desarrollo)
+* **Frontend:** HTML5, CSS3, Bootstrap 5
+* **Despliegue (Deploy):** Render
+* **Seguridad:** Autenticación de usuarios y variables de entorno protegidas.
 
-## ⚙️ Instalación y Configuración
+## ✨ Funcionalidades Principales
+1.  **Gestión de Clientes:** Altas, bajas y listado de deportistas.
+2.  **Control de Pagos:** Registro de ingresos con fecha y monto.
+3.  **Membresías:** Estado de las suscripciones.
+4.  **Seguridad:** Panel de administración protegido con Login (nadie puede ver los datos sin cuenta).
+5.  **Panel Admin:** Interfaz gráfica para gestionar la base de datos sin código.
 
-1.  **Clonar el repositorio:**
-    ```bash
-    git clone [https://github.com/tu-usuario/gestion-gimnasio.git](https://github.com/tu-usuario/gestion-gimnasio.git)
-    cd gestion-gimnasio
-    ```
+## 🛠️ Instalación Local (Para desarrolladores)
+Si deseas correr este proyecto en tu propio computador:
 
-2.  **Crear entorno virtual:**
-    ```bash
-    python3 -m venv venv
-    source venv/bin/activate
-    ```
-
-3.  **Instalar dependencias:**
-    ```bash
-    pip install django
-    ```
-
-4.  **Ejecutar migraciones:**
-    ```bash
-    python3 manage.py migrate
-    ```
-
-5.  **Iniciar servidor:**
-    ```bash
-    python3 manage.py runserver
-    ```
-
-## Autor
-[Luis Marabolí Quitral] - Desarrollador Full Stack en formación.
+1. Clonar el repositorio:
+   ```bash
+   git clone [https://github.com/Luhuss/sistema-gestion-gimnasio-v1.0.git](https://github.com/Luhuss/sistema-gestion-gimnasio-v1.0.git)
